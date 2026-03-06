@@ -161,7 +161,7 @@ export default function App() {
         {/* Main layout */}
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Wizard panel */}
-          <div className={`lg:w-[42%] ${mobileView === 'preview' ? 'hidden lg:block' : ''}`}>
+          <div className={`lg:w-[42%] min-w-0 ${mobileView === 'preview' ? 'hidden lg:block' : ''}`}>
             <div className="card-gradient border border-metal/20 rounded-2xl p-4 md:p-6">
               <ProgressBar
                 currentStep={currentStep}
@@ -277,7 +277,7 @@ export default function App() {
           </div>
 
           {/* Preview panel */}
-          <div className={`lg:w-[58%] ${mobileView === 'wizard' ? 'hidden lg:block' : ''}`}>
+          <div className={`lg:w-[58%] min-w-0 ${mobileView === 'wizard' ? 'hidden lg:block' : ''}`}>
             <div className="card-gradient border border-metal/20 rounded-2xl p-4 md:p-6 lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] flex flex-col">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-lg font-bold text-white flex items-center gap-2">

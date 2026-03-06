@@ -131,13 +131,13 @@ export default function PreviewPanel({ data }) {
       {/* Preview content */}
       <div
         ref={previewRef}
-        className="flex-1 overflow-y-auto pr-2 custom-scrollbar"
+        className="flex-1 overflow-y-auto overflow-x-hidden pr-2 custom-scrollbar"
         role="region"
         aria-label="Document preview"
         aria-live="polite"
       >
         {activeFormat === 'raw' && (
-          <pre className="text-xs text-cloudy whitespace-pre-wrap font-mono lg:hidden">
+          <pre className="text-xs text-cloudy whitespace-pre-wrap break-words font-mono lg:hidden overflow-x-hidden">
             {sectionsToPlainText(sections, data)}
           </pre>
         )}
@@ -181,7 +181,7 @@ export default function PreviewPanel({ data }) {
             {sections.map((section) => (
               <div key={section.id} id={`preview-${section.id}`} className="mb-6">
                 <h3 className="text-sm font-bold text-white mb-2">{section.title}</h3>
-                <div className="text-xs text-cloudy leading-relaxed whitespace-pre-wrap">
+                <div className="text-xs text-cloudy leading-relaxed whitespace-pre-wrap break-words">
                   {section.content}
                 </div>
               </div>
