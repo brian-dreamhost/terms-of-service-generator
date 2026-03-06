@@ -59,7 +59,7 @@ export default function PreviewPanel({ data }) {
   ]
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col flex-1 min-h-0">
       {/* Export controls */}
       <div className="flex flex-wrap gap-2 mb-4">
         {formatButtons.map((btn) => (
